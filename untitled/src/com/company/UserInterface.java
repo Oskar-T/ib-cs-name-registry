@@ -13,9 +13,11 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+package com.company;
+
 import java.util.Scanner;
 
-public class UserInterface implements AutoCloseable
+public class UserInterface implements AutoCloseable //View
 {
   public UserInterface ()
   {
@@ -42,14 +44,20 @@ public class UserInterface implements AutoCloseable
   // returns an array of names read from the user
   public String[] readNames ()
   {
-    // code to be written here (note: use readName())
-    return new String [0];
+    String names[] = new String[3];
+    for(int i = 0; i < 3; i++) {
+      names[i] = readName();
+    }
+
+    return names;
   }
 
   // prints names, each name on a separate line
   public void showNames (String[] names)
   {
-    // code to be written here
+    for(int i = 0; i < 3; i++) {
+      System.out.println(names[i] + " ");
+    }
   }
 
   private Scanner scanner;

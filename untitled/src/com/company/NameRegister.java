@@ -12,23 +12,28 @@
 
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
+package com.company;
 
-public class NameRegister
+public class NameRegister //Model
 {
-  public NameRegister ()
-  {
+
+  public String[] registerArr = new String[3];
+
+  public NameRegister () {
+
   }
 
   // sets the names in the register
   public void setNames (String[] names)
   {
-    // code to be written here
+    for(int i = 0; i < names.length; i++) {
+      registerArr[i] = names[i];
+    }
   }
 
   // return an array of current names in register
   public String[] getNames ()
   {
-    // code to be written here
-    return new String [0];
+    return registerArr;
   }
 }
